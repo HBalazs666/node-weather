@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Index</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel = "stylesheet" href="css/styles.css"> <!-- Így kell CSS fájlt illeszteni -->
+    </head>
+    <body>
+
+        <div class="main-content">
+            {{>header}} <!-- Részegység beillesztése (egyformák legyenek a headerek mindenhol) -->
+
+            <p>Use this site to get your weather!</p>
+            <form action="">
+                <input type="text" placeholder="Location">
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p> <!-- Id-k szükségesek, hogy máshol hizatkozhassuk (app.js); az eredmény itt fog látszani -->
+            <p id="message-2"></p>
+        </div>
+
+
+        {{>footer}} <!-- Ugyanaz mint a headernél -->
+
+        <script src="/js/app.js"></script> <!-- Megadjuk az útvonalat a fájlhoz, ami feldolgozza a formot -->
+    </body>
+
+</html>
